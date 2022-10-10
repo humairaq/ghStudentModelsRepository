@@ -1,0 +1,48 @@
+"Physical Name","Generate Using Bind","Physical Only","Schema","Value"
+CURRENT_TIMESTAMP,,true,,CURRENT_TIMESTAMP
+CURRENT_USER,,true,,CURRENT_USER
+DF_Application_Cities_CityID,false,,Application,NEXT VALUE FOR [Sequences].[CityID]
+DF_Application_Countries_CountryID,false,,Application,NEXT VALUE FOR [Sequences].[CountryID]
+DF_Application_DeliveryMethods_DeliveryMethodID,false,,Application,NEXT VALUE FOR [Sequences].[DeliveryMethodID]
+DF_Application_PaymentMethods_PaymentMethodID,false,,Application,NEXT VALUE FOR [Sequences].[PaymentMethodID]
+DF_Application_People_PersonID,false,,Application,NEXT VALUE FOR [Sequences].[PersonID]
+DF_Application_StateProvinces_StateProvinceID,false,,Application,NEXT VALUE FOR [Sequences].[StateProvinceID]
+DF_Application_SystemParameters_LastEditedWhen,false,,Application,sysdatetime()
+DF_Application_SystemParameters_SystemParameterID,false,,Application,NEXT VALUE FOR [Sequences].[SystemParameterID]
+DF_Application_TransactionTypes_TransactionTypeID,false,,Application,NEXT VALUE FOR [Sequences].[TransactionTypeID]
+DF_Purchasing_PurchaseOrderLines_LastEditedWhen,false,,Purchasing,sysdatetime()
+DF_Purchasing_PurchaseOrderLines_PurchaseOrderLineID,false,,Purchasing,NEXT VALUE FOR [Sequences].[PurchaseOrderLineID]
+DF_Purchasing_PurchaseOrders_LastEditedWhen,false,,Purchasing,sysdatetime()
+DF_Purchasing_PurchaseOrders_PurchaseOrderID,false,,Purchasing,NEXT VALUE FOR [Sequences].[PurchaseOrderID]
+DF_Purchasing_SupplierCategories_SupplierCategoryID,false,,Purchasing,NEXT VALUE FOR [Sequences].[SupplierCategoryID]
+DF_Purchasing_SupplierTransactions_LastEditedWhen,false,,Purchasing,sysdatetime()
+DF_Purchasing_SupplierTransactions_SupplierTransactionID,false,,Purchasing,NEXT VALUE FOR [Sequences].[TransactionID]
+DF_Purchasing_Suppliers_SupplierID,false,,Purchasing,NEXT VALUE FOR [Sequences].[SupplierID]
+DF_Sales_BuyingGroups_BuyingGroupID,false,,Sales,NEXT VALUE FOR [Sequences].[BuyingGroupID]
+DF_Sales_CustomerCategories_CustomerCategoryID,false,,Sales,NEXT VALUE FOR [Sequences].[CustomerCategoryID]
+DF_Sales_CustomerTransactions_CustomerTransactionID,false,,Sales,NEXT VALUE FOR [Sequences].[TransactionID]
+DF_Sales_CustomerTransactions_LastEditedWhen,false,,Sales,sysdatetime()
+DF_Sales_Customers_CustomerID,false,,Sales,NEXT VALUE FOR [Sequences].[CustomerID]
+DF_Sales_InvoiceLines_InvoiceLineID,false,,Sales,NEXT VALUE FOR [Sequences].[InvoiceLineID]
+DF_Sales_InvoiceLines_LastEditedWhen,false,,Sales,sysdatetime()
+DF_Sales_Invoices_InvoiceID,false,,Sales,NEXT VALUE FOR [Sequences].[InvoiceID]
+DF_Sales_Invoices_LastEditedWhen,false,,Sales,sysdatetime()
+DF_Sales_OrderLines_LastEditedWhen,false,,Sales,sysdatetime()
+DF_Sales_OrderLines_OrderLineID,false,,Sales,NEXT VALUE FOR [Sequences].[OrderLineID]
+DF_Sales_Orders_LastEditedWhen,false,,Sales,sysdatetime()
+DF_Sales_Orders_OrderID,false,,Sales,NEXT VALUE FOR [Sequences].[OrderID]
+DF_Sales_SpecialDeals_LastEditedWhen,false,,Sales,sysdatetime()
+DF_Sales_SpecialDeals_SpecialDealID,false,,Sales,NEXT VALUE FOR [Sequences].[SpecialDealID]
+DF_Warehouse_Colors_ColorID,false,,Warehouse,NEXT VALUE FOR [Sequences].[ColorID]
+DF_Warehouse_PackageTypes_PackageTypeID,false,,Warehouse,NEXT VALUE FOR [Sequences].[PackageTypeID]
+DF_Warehouse_StockGroups_StockGroupID,false,,Warehouse,NEXT VALUE FOR [Sequences].[StockGroupID]
+DF_Warehouse_StockItemHoldings_LastEditedWhen,false,,Warehouse,sysdatetime()
+DF_Warehouse_StockItemStockGroups_LastEditedWhen,false,,Warehouse,sysdatetime()
+DF_Warehouse_StockItemStockGroups_StockItemStockGroupID,false,,Warehouse,NEXT VALUE FOR [Sequences].[StockItemStockGroupID]
+DF_Warehouse_StockItemTransactions_LastEditedWhen,false,,Warehouse,sysdatetime()
+DF_Warehouse_StockItemTransactions_StockItemTransactionID,false,,Warehouse,NEXT VALUE FOR [Sequences].[TransactionID]
+DF_Warehouse_StockItems_StockItemID,false,,Warehouse,NEXT VALUE FOR [Sequences].[StockItemID]
+NULL,,true,,NULL
+SESSION_USER,,true,,SESSION_USER
+SYSTEM_USER,,true,,SYSTEM_USER
+USER,,true,,USER

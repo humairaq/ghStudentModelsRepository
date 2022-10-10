@@ -1,0 +1,4 @@
+"Physical Name","Generate Using Bind","Max","Min","Physical Only","Quote Value","Schema","Type","Value"
+CK_Sales_Invoices_ReturnedDeliveryData_Must_Be_Valid_JSON,false,,,,,Sales,User-Defined,[ReturnedDeliveryData] IS NULL OR isjson([ReturnedDeliveryData])<>(0)
+CK_Sales_SpecialDeals_Exactly_One_NOT_NULL_Pricing_Option_Is_Required,false,,,,,Sales,User-Defined,((case when [DiscountAmount] IS NULL then (0) else (1) end+case when [DiscountPercentage] IS NULL then (0) else (1) end)+case when [UnitPrice] IS NULL then (0) else (1) end)=(1)
+CK_Sales_SpecialDeals_Unit_Price_Deal_Requires_Special_StockItem,false,,,,,Sales,User-Defined,[StockItemID] IS NOT NULL AND [UnitPrice] IS NOT NULL OR [UnitPrice] IS NULL

@@ -1,0 +1,90 @@
+"Physical Name","Generate Using Bind","Max","Min","Physical Only","Quote Value","Schema","Type","Value"
+CK_BillOfMaterials_BOMLevel,false,,,,,Production,User-Defined,[ProductAssemblyID] IS NULL AND [BOMLevel]=(0) AND [PerAssemblyQty]=(1.00) OR [ProductAssemblyID] IS NOT NULL AND [BOMLevel]>=(1)
+CK_BillOfMaterials_EndDate,false,,,,,Production,User-Defined,[EndDate]>[StartDate] OR [EndDate] IS NULL
+CK_BillOfMaterials_PerAssemblyQty,false,,1.00,,No,Production,MinMax, >= 1.00
+CK_BillOfMaterials_ProductAssemblyID,false,,,,,Production,User-Defined,[ProductAssemblyID]<>[ComponentID]
+CK_Document_Status,false,3,1,,No,Production,MinMax, BETWEEN 1 AND 3
+CK_EmployeeDepartmentHistory_EndDate,false,,,,,HumanResources,User-Defined,[EndDate]>=[StartDate] OR [EndDate] IS NULL
+CK_EmployeePayHistory_PayFrequency,false,,,,,HumanResources,Valid Values,[]=2 OR []=1
+CK_EmployeePayHistory_Rate,false,200.00,6.50,,No,HumanResources,MinMax, BETWEEN 6.50 AND 200.00
+CK_Employee_BirthDate,false,"dateadd(year,(-18),getdate",1930-01-01,,Yes,HumanResources,MinMax," BETWEEN '1930-01-01' AND 'dateadd(year,(-18),getdate'"
+CK_Employee_Gender,false,,,,Yes,HumanResources,Valid Values,[]='F' OR []='M'
+CK_Employee_HireDate,false,"dateadd(day,(1),getdate",1996-07-01,,Yes,HumanResources,MinMax," BETWEEN '1996-07-01' AND 'dateadd(day,(1),getdate'"
+CK_Employee_MaritalStatus,false,,,,Yes,HumanResources,Valid Values,[]='S' OR []='M'
+CK_Employee_SickLeaveHours,false,120,0,,No,HumanResources,MinMax, BETWEEN 0 AND 120
+CK_Employee_VacationHours,false,240,-40,,No,HumanResources,MinMax, BETWEEN -40 AND 240
+CK_Location_Availability,false,,0.00,,No,Production,MinMax, >= 0.00
+CK_Location_CostRate,false,,0.00,,No,Production,MinMax, >= 0.00
+CK_Person_EmailPromotion,false,2,0,,No,Person,MinMax, BETWEEN 0 AND 2
+CK_Person_PersonType,false,,,,,Person,User-Defined,[PersonType] IS NULL OR (upper([PersonType])='GC' OR upper([PersonType])='SP' OR upper([PersonType])='EM' OR upper([PersonType])='IN' OR upper([PersonType])='VC' OR upper([PersonType])='SC')
+CK_ProductCostHistory_EndDate,false,,,,,Production,User-Defined,[EndDate]>=[StartDate] OR [EndDate] IS NULL
+CK_ProductCostHistory_StandardCost,false,,0.00,,No,Production,MinMax, >= 0.00
+CK_ProductInventory_Bin,false,100,0,,No,Production,MinMax, BETWEEN 0 AND 100
+CK_ProductInventory_Shelf,false,,,,,Production,User-Defined,[Shelf] like '[A-Za-z]' OR [Shelf]='N/A'
+CK_ProductListPriceHistory_EndDate,false,,,,,Production,User-Defined,[EndDate]>=[StartDate] OR [EndDate] IS NULL
+CK_ProductListPriceHistory_ListPrice,false,,,,,Production,User-Defined,[ListPrice]>(0.00)
+CK_ProductReview_Rating,false,5,1,,No,Production,MinMax, BETWEEN 1 AND 5
+CK_ProductVendor_AverageLeadTime,false,,1,,No,Purchasing,MinMax, >= 1
+CK_ProductVendor_LastReceiptCost,false,,,,,Purchasing,User-Defined,[LastReceiptCost]>(0.00)
+CK_ProductVendor_MaxOrderQty,false,,1,,No,Purchasing,MinMax, >= 1
+CK_ProductVendor_MinOrderQty,false,,1,,No,Purchasing,MinMax, >= 1
+CK_ProductVendor_OnOrderQty,false,,0,,No,Purchasing,MinMax, >= 0
+CK_ProductVendor_StandardPrice,false,,,,,Purchasing,User-Defined,[StandardPrice]>(0.00)
+CK_Product_Class,false,,,,,Production,User-Defined,upper([Class])='H' OR upper([Class])='M' OR upper([Class])='L' OR [Class] IS NULL
+CK_Product_DaysToManufacture,false,,0,,No,Production,MinMax, >= 0
+CK_Product_ListPrice,false,,0.00,,No,Production,MinMax, >= 0.00
+CK_Product_ProductLine,false,,,,,Production,User-Defined,upper([ProductLine])='R' OR upper([ProductLine])='M' OR upper([ProductLine])='T' OR upper([ProductLine])='S' OR [ProductLine] IS NULL
+CK_Product_ReorderPoint,false,,,,,Production,User-Defined,[ReorderPoint]>(0)
+CK_Product_SafetyStockLevel,false,,,,,Production,User-Defined,[SafetyStockLevel]>(0)
+CK_Product_SellEndDate,false,,,,,Production,User-Defined,[SellEndDate]>=[SellStartDate] OR [SellEndDate] IS NULL
+CK_Product_StandardCost,false,,0.00,,No,Production,MinMax, >= 0.00
+CK_Product_Style,false,,,,,Production,User-Defined,upper([Style])='U' OR upper([Style])='M' OR upper([Style])='W' OR [Style] IS NULL
+CK_Product_Weight,false,,,,,Production,User-Defined,[Weight]>(0.00)
+CK_PurchaseOrderDetail_OrderQty,false,,,,,Purchasing,User-Defined,[OrderQty]>(0)
+CK_PurchaseOrderDetail_ReceivedQty,false,,0.00,,No,Purchasing,MinMax, >= 0.00
+CK_PurchaseOrderDetail_RejectedQty,false,,0.00,,No,Purchasing,MinMax, >= 0.00
+CK_PurchaseOrderDetail_UnitPrice,false,,0.00,,No,Purchasing,MinMax, >= 0.00
+CK_PurchaseOrderHeader_Freight,false,,0.00,,No,Purchasing,MinMax, >= 0.00
+CK_PurchaseOrderHeader_ShipDate,false,,,,,Purchasing,User-Defined,[ShipDate]>=[OrderDate] OR [ShipDate] IS NULL
+CK_PurchaseOrderHeader_Status,false,4,1,,No,Purchasing,MinMax, BETWEEN 1 AND 4
+CK_PurchaseOrderHeader_SubTotal,false,,0.00,,No,Purchasing,MinMax, >= 0.00
+CK_PurchaseOrderHeader_TaxAmt,false,,0.00,,No,Purchasing,MinMax, >= 0.00
+CK_SalesOrderDetail_OrderQty,false,,,,,Sales,User-Defined,[OrderQty]>(0)
+CK_SalesOrderDetail_UnitPrice,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesOrderDetail_UnitPriceDiscount,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesOrderHeader_DueDate,false,,,,,Sales,User-Defined,[DueDate]>=[OrderDate]
+CK_SalesOrderHeader_Freight,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesOrderHeader_ShipDate,false,,,,,Sales,User-Defined,[ShipDate]>=[OrderDate] OR [ShipDate] IS NULL
+CK_SalesOrderHeader_Status,false,8,0,,No,Sales,MinMax, BETWEEN 0 AND 8
+CK_SalesOrderHeader_SubTotal,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesOrderHeader_TaxAmt,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesPersonQuotaHistory_SalesQuota,false,,,,,Sales,User-Defined,[SalesQuota]>(0.00)
+CK_SalesPerson_Bonus,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesPerson_CommissionPct,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesPerson_SalesLastYear,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesPerson_SalesQuota,false,,,,,Sales,User-Defined,[SalesQuota]>(0.00)
+CK_SalesPerson_SalesYTD,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesTaxRate_TaxType,false,3,1,,No,Sales,MinMax, BETWEEN 1 AND 3
+CK_SalesTerritoryHistory_EndDate,false,,,,,Sales,User-Defined,[EndDate]>=[StartDate] OR [EndDate] IS NULL
+CK_SalesTerritory_CostLastYear,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesTerritory_CostYTD,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesTerritory_SalesLastYear,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SalesTerritory_SalesYTD,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_ShipMethod_ShipBase,false,,,,,Purchasing,User-Defined,[ShipBase]>(0.00)
+CK_ShipMethod_ShipRate,false,,,,,Purchasing,User-Defined,[ShipRate]>(0.00)
+CK_ShoppingCartItem_Quantity,false,,1,,No,Sales,MinMax, >= 1
+CK_SpecialOffer_DiscountPct,false,,0.00,,No,Sales,MinMax, >= 0.00
+CK_SpecialOffer_EndDate,false,,,,,Sales,User-Defined,[EndDate]>=[StartDate]
+CK_SpecialOffer_MaxQty,false,,0,,No,Sales,MinMax, >= 0
+CK_SpecialOffer_MinQty,false,,0,,No,Sales,MinMax, >= 0
+CK_TransactionHistoryArchive_TransactionType,false,,,,Yes,Production,Valid Values,[]='P' OR []='S' OR []='W'
+CK_TransactionHistory_TransactionType,false,,,,Yes,Production,Valid Values,[]='P' OR []='S' OR []='W'
+CK_Vendor_CreditRating,false,5,1,,No,Purchasing,MinMax, BETWEEN 1 AND 5
+CK_WorkOrderRouting_ActualCost,false,,,,,Production,User-Defined,[ActualCost]>(0.00)
+CK_WorkOrderRouting_ActualEndDate,false,,,,,Production,User-Defined,[ActualEndDate]>=[ActualStartDate] OR [ActualEndDate] IS NULL OR [ActualStartDate] IS NULL
+CK_WorkOrderRouting_ActualResourceHrs,false,,0.0000,,No,Production,MinMax, >= 0.0000
+CK_WorkOrderRouting_PlannedCost,false,,,,,Production,User-Defined,[PlannedCost]>(0.00)
+CK_WorkOrderRouting_ScheduledEndDate,false,,,,,Production,User-Defined,[ScheduledEndDate]>=[ScheduledStartDate]
+CK_WorkOrder_EndDate,false,,,,,Production,User-Defined,[EndDate]>=[StartDate] OR [EndDate] IS NULL
+CK_WorkOrder_OrderQty,false,,,,,Production,User-Defined,[OrderQty]>(0)
+CK_WorkOrder_ScrappedQty,false,,0,,No,Production,MinMax, >= 0

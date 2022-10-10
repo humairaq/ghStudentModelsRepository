@@ -1,0 +1,12 @@
+"Domain Physical_Name","Null Option","Physical Data Type","Check Constraint Usage Physical_Name","Validation Rule","Value"
+_default_,Null,char(18),,,
+String,Null,varchar(20),,,
+Number,Null,integer,,,
+Datetime,Null,datetime,,,
+Blob,Null,varbinary,,,
+AccountNumber,Null,nvarchar(15),,,
+Flag,Not Null,bit,,,
+NameStyle,Not Null,bit,,,
+Name,Null,nvarchar(50),,,
+OrderNumber,Null,nvarchar(25),,,
+Phone,Null,nvarchar(25),,,
